@@ -3,14 +3,14 @@
 ![License](https://img.shields.io/github/license/gali8/KeyboardProtocol.svg)
 ![Language](https://img.shields.io/badge/Swift-5.0-red.svg)
 
-KeyboardProtocol (and KeyboardExtension) is ready to be used with your UIViewController+UIScrollview.
-Inset and offset are automatically calculated on the first responder.
+KeyboardProtocol is ready to be used with your UIViewController.
+Scrollview inset and offset, are automatically calculated on the first responder.
 
 ## How to use:
 
 Import the **KeyboardExtension.swift** file into your Swift project.
 
-Implement the protocol on *ViewController*:
+Implement **KeyboardProtocol**:
 
 ```swift
 class ViewController: UIViewController, KeyboardProtocol {
