@@ -6,8 +6,6 @@
 KeyboardProtocol (and KeyboardExtension) is ready to be used with your UIViewController+UIScrollview.
 Inset and offset are automatically calculated on the first responder.
 
-![Demo](https://img.shields.io/badge/Swift-5.0-red.svg)
-
 ##How to use:
 
 Import the **KeyboardExtension.swift** file into your Swift project.
@@ -30,10 +28,16 @@ Add and connect the ScrollView:
 Then register for keyboard notifications:
 
 ```swift
-self.registerForKeyboardNotification()
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    self.registerForKeyboardNotification()
+}
 ```
 
 and run. :)
+
+![Demo](https://github.com/gali8/KeyboardProtocol/blob/master/Demo.png?raw=true)
 
 ## License
 
