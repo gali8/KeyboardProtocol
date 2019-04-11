@@ -1,11 +1,12 @@
 #KeyboardProtocol: ViewController Extension for ScrollView
 
 ![License](https://img.shields.io/github/license/gali8/KeyboardProtocol.svg)
+![Language](https://img.shields.io/badge/Swift-5.0-red.svg)
 
-KeyboardProtocol is an extension ready to be used with your scrollview.
+KeyboardProtocol (and KeyboardExtension) is ready to be used with your UIViewController+UIScrollview.
 Inset and offset are automatically calculated on the first responder.
 
-Everything is ok with a couple of lines of code.
+![Demo](https://img.shields.io/badge/Swift-5.0-red.svg)
 
 ##How to use:
 
