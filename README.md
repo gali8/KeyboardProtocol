@@ -56,5 +56,5 @@ src="http://68.media.tumblr.com/3243ca9030c3fa14ca3042344ae3d510/tumblr_inline_n
 
 ## Contributors
 
-Daniele Galiotto (founder) - iOS Freelance Developer -
+Daniele Galiotto (founder) - Co-Founder at Nexor Technology srl -
 **[www.nexor.it](http://www.nexor.it)**
