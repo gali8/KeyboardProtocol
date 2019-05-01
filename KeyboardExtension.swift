@@ -26,8 +26,9 @@ fileprivate extension UIViewController {
         let keyboardSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
         
         let keyboardViewController = self as! KeyboardProtocol
-        keyboardViewController.scrollView.contentInset.bottom = keyboardSize
-        keyboardViewController.scrollView.scrollIndicatorInsets.bottom = keyboardSize
+        let bottomInset = keyboardSize - (self.tabBarController?.tabBar.frame.size.height ?? 0)
+        keyboardViewController.scrollView.contentInset.bottom = bottomInset
+        keyboardViewController.scrollView.scrollIndicatorInsets.bottom = bottomInset
         
         let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         UIView.animate(withDuration: duration) { self.view.layoutIfNeeded() }
