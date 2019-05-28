@@ -27,8 +27,15 @@ fileprivate extension UIViewController {
         
         let keyboardViewController = self as! KeyboardProtocol
         let bottomInset = keyboardSize - (self.tabBarController?.tabBar.frame.size.height ?? 0)
-        keyboardViewController.scrollView.contentInset.bottom = bottomInset
-        keyboardViewController.scrollView.scrollIndicatorInsets.bottom = bottomInset
+
+        if keyboardViewController.scrollView.transform.d == -1 { //keyboardViewController.scrollView.transform.d support viewcontroller rotation like for chat
+            keyboardViewController.scrollView.contentInset.bottom = -bottomInset
+            keyboardViewController.scrollView.scrollIndicatorInsets.bottom = 0
+        }
+        else {
+            keyboardViewController.scrollView.contentInset.bottom = bottomInset
+            keyboardViewController.scrollView.scrollIndicatorInsets.bottom = bottomInset
+        }
         
         let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         UIView.animate(withDuration: duration) { self.view.layoutIfNeeded() }
